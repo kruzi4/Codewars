@@ -1,0 +1,6 @@
+{
+  "require-dev": {
+    "larapack/dd": "*",
+    "phpunit/phpunit": "^9"
+  }
+}
