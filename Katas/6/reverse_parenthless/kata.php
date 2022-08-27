@@ -28,7 +28,9 @@ function reverseParentheses(string $s): string {
 function reverseParentheses2($s)
 {
     $pattern = "/\((\w+)\)/";
-    return preg_match($pattern, $s) ? reverseParentheses(preg_replace_callback($pattern, static function ($m) {
+    return preg_match($pattern, $s) ?
+        reverseParentheses(
+            preg_replace_callback($pattern, static function ($m) {
         return strrev($m[1]);
     }, $s)) : $s;
 }
