@@ -14,12 +14,12 @@ include "../../../index.php";
 function toJadenCase(string $string): string
 {
     $explode = explode(' ', $string);
-    $explode = array_map(static function ($el) {return ucfirst($el);}, $explode);
+    $explode = array_map('ucfirst', $explode);
     return implode(' ', $explode);
 }
 
 $str = "How can mirrors be real if our eyes aren't real";
-//dd(toJadenCase($str));
+dd(toJadenCase($str));
 
 
 class JadenTestCases extends TestCase
